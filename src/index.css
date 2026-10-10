@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #08090C;
+    color: #E2E8F0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090C;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2230;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5500;
+}
+
+/* Glowing utilities */
+.glow-ember {
+  box-shadow: 0 0 35px -5px rgba(255, 85, 0, 0.4);
+}
+
+.glow-plasma {
+  box-shadow: 0 0 35px -5px rgba(0, 240, 255, 0.35);
+}
+
+.glow-hazard {
+  box-shadow: 0 0 35px -5px rgba(255, 42, 85, 0.45);
+}
+
+.text-glow-ember {
+  text-shadow: 0 0 20px rgba(255, 85, 0, 0.7);
+}
+
+.text-glow-plasma {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
+}
+
+.glass-panel {
+  background: rgba(13, 15, 21, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s ease;
+}
+.glass-panel-hover:hover {
+  border-color: rgba(255, 85, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(255, 85, 0, 0.2);
+}
+
+/* CRT Scanline effect for 1602 LCD */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.06),
+    rgba(0, 255, 0, 0.02),
+    rgba(0, 0, 255, 0.06)
+  );
+  background-size: 100% 4px, 6px 100%;
+}
+
+/* Lenis Smooth Scroll styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
