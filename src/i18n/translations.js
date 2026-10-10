@@ -90,7 +90,7 @@ export const translations = {
       title: 'Инженеры и разработчики ',
       titleGradient: 'с глубоким пониманием железа и софта',
       subtitle: 'Междисциплинарный сплав экспертов в промышленной электронике, микропроцессорах, искусственном интеллекте и котельном оборудовании.',
-      statusNotice: 'Основной состав формируется к защите Pitch Day 3.0',
+      statusNotice: 'Команда проекта Smart Boiler укомплектована к защите Pitch Day 3.0',
       members: [
         {
           name: 'Султонбоев Азизбек Умаржон угли',
@@ -115,25 +115,21 @@ export const translations = {
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Инженерное направление: Mobile & Web',
-          role: 'Flutter & UI/UX Developer',
-          badge: 'Участник команды',
-          focus: 'Кроссплатформенное приложение и Captive Portal точки доступа',
-          bio: 'Создание мобильного приложения Smart Boiler на Flutter (iOS/Android) с локальным поиском по mDNS (boiler.local) и адаптивного Web-интерфейса панели управления.',
-          skills: ['Flutter / Dart', 'Mobile UX', 'WebSocket', 'REST Client', 'State Management'],
-          isPending: true,
-          pendingLabel: 'Профиль дополняется',
+          name: 'Отажанов Асадбек (Otajanov Asadbek)',
+          role: 'Инженер-программист • Mobile & Web Platforms',
+          badge: 'Software Engineer',
+          focus: 'Мобильное приложение Flutter, Web-панель управления и шлюз API',
+          bio: 'Разработчик программного комплекса Smart Boiler. Создание кроссплатформенного мобильного клиента на Flutter (iOS/Android), реализация Web-панели телеметрии и надежного сетевого протокола взаимодействия с контроллером ESP32 по mDNS и REST API.',
+          skills: ['Flutter / Dart', 'Mobile App', 'Web Dashboard', 'REST API & WebSocket', 'UI Engineering'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Теплотехника и Полевые Испытания',
-          role: 'Thermal Systems & Field HVAC Lead',
-          badge: 'Участник команды',
-          focus: 'Термодинамика котлов, редукторы и полевой монтаж',
-          bio: 'Практический опыт модернизации твердотопливных котельных от 20 кВт до 500 кВт. Совместимость с редукторами Ч-63/Ч-80, шнековыми парами и дозирование топлива.',
-          skills: ['Гидравлика', 'Котлы длительного горения', 'Редукторы', 'Шнековые пары', 'Монтаж 220V'],
-          isPending: true,
-          pendingLabel: 'Профиль дополняется',
+          name: 'Пулатова Севинчой (Po\'latova Sevinchoy)',
+          role: 'UI/UX дизайнер & Аналитик данных (Product & QA)',
+          badge: 'UI/UX & QA Specialist',
+          focus: 'Интерфейсы пользователя, анализ данных с 10 домов и контроль качества',
+          bio: 'Проектирование пользовательского опыта и эргономики графиков расхода топлива. Анализ телеметрии с 10 пилотных домохозяйств г. Ургенч, проведение функционального тестирования (QA) и подготовка проектно-технической документации.',
+          skills: ['UI/UX Design', 'User Research', 'Анализ данных', 'QA Тестирование', 'Figma', 'Телеметрия'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         }
       ]
@@ -330,7 +326,7 @@ export const translations = {
       title: 'Dasturchilar va muhandislar: ',
       titleGradient: 'apparat va dasturiy ta\'minot uyg\'unligi',
       subtitle: 'Sanoat elektronikasi, mikrokontrollerlar, sun\'iy intellekt va qozonxona uskunalarini chuqur tushunadigan mutaxassislar birlashmasi.',
-      statusNotice: 'Pitch Day 3.0 himoyasiga jamoa tarkibi shakllantirilmoqda',
+      statusNotice: 'Smart Boiler jamoasi Pitch Day 3.0 himoyasiga to‘liq shakllantirildi',
       members: [
         {
           name: 'Sultonboyev Azizbek Umarjon o‘g‘li',
@@ -355,25 +351,21 @@ export const translations = {
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Muhandislik yo\'nalishi: Mobile & Web',
-          role: 'Flutter & UI/UX dasturchisi',
-          badge: 'Jamoa a\'zosi',
-          focus: 'Krossplatformali ilova va kirish nuqtasi Web-portali',
-          bio: 'Smart Boiler mobil ilovasini Flutter (iOS/Android) platformasida yaratish, mDNS (boiler.local) orqali avtomatik topish va qulay Web-interfeys.',
-          skills: ['Flutter / Dart', 'Mobile UX', 'WebSocket', 'REST Client', 'State Management'],
-          isPending: true,
-          pendingLabel: 'Profil to\'ldirilmoqda',
+          name: 'Otajanov Asadbek',
+          role: 'Dasturchi-muhandis • Mobile & Web platformalar',
+          badge: 'Software Engineer',
+          focus: 'Flutter mobil ilovasi, boshqaruv Web-paneli va API integratsiyasi',
+          bio: 'Smart Boiler dasturiy ta\'minot ekotizimini ishlab chiquvchi. Krossplatformali Flutter (iOS/Android) mobil ilovasi, monitoring Web-paneli hamda ESP32 kontrolleri bilan mDNS va REST API orqali barqaror ma\'lumot almashinuvini ta\'minlash.',
+          skills: ['Flutter / Dart', 'Mobil ilova', 'Web Dashboard', 'REST API & WebSocket', 'UI Engineering'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Issiqlik texnikasi va Dala sinovlari',
-          role: 'Issiqlik tizimlari yetakchi mutaxassisi',
-          badge: 'Jamoa a\'zosi',
-          focus: 'Qozonlar termodinamikasi, reduktorlar va montaj',
-          bio: '20 kVt dan 500 kVt gacha bo\'lgan qattiq yoqilg\'i qozonlarini modernizatsiya qilish bo\'yicha amaliy tajriba. Ch-63/Ch-80 reduktorlari, shnek va yoqilg\'i dozalash.',
-          skills: ['Gidravlika', 'Uzoq yonuvchi qozonlar', 'Reduktorlar', 'Shnek juftliklari', 'Montaj 220V'],
-          isPending: true,
-          pendingLabel: 'Profil to\'ldirilmoqda',
+          name: 'Po\'latova Sevinchoy',
+          role: 'UI/UX dizayner & Tizim tahlilchisi (Product & QA)',
+          badge: 'UI/UX & QA mutaxassisi',
+          focus: 'Foydalanuvchi interfeyslari, 10 ta uy telemetriyasi tahlili va sifat nazorati',
+          bio: 'Qozonxona boshqaruv tizimining qulay grafik interfeyslarini loyihalash va yoqilg\'i sarfi grafiklari ergonomikasi. Urganch shahridagi 10 ta sinov xonadonidan olingan telemetriya ma\'lumotlarini tahlil qilish, sinovdan o\'tkazish (QA) va loyiha hujjatlarini yuritish.',
+          skills: ['UI/UX dizayn', 'User Research', 'Ma\'lumotlar tahlili', 'QA sinovlari', 'Figma', 'Telemetriya'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         }
       ]
@@ -570,7 +562,7 @@ export const translations = {
       title: 'Engineers and Developers ',
       titleGradient: 'bridging hardware and software mastery',
       subtitle: 'A multidisciplinary collective of embedded hardware, microprocessors, machine learning, and industrial HVAC experts.',
-      statusNotice: 'Core roster being finalized for Pitch Day 3.0 defense',
+      statusNotice: 'Smart Boiler core team finalized for Pitch Day 3.0 defense',
       members: [
         {
           name: 'Sultonboyev Azizbek Umarjon o‘g‘li',
@@ -595,25 +587,21 @@ export const translations = {
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Engineering Domain: Mobile & Web',
-          role: 'Flutter & UI/UX Developer',
-          badge: 'Team Member',
-          focus: 'Cross-platform mobile application and Captive Portal setup',
-          bio: 'Building the turnkey Smart Boiler app in Flutter (iOS/Android) with direct zero-cloud mDNS discovery (boiler.local) and responsive diagnostic dashboard.',
-          skills: ['Flutter / Dart', 'Mobile UX', 'WebSocket', 'REST Client', 'State Management'],
-          isPending: true,
-          pendingLabel: 'Profile updating',
+          name: 'Otajanov Asadbek',
+          role: 'Software Engineer • Mobile & Web Platforms',
+          badge: 'Software Engineer',
+          focus: 'Flutter cross-platform application, web telemetry dashboard & API gateway',
+          bio: 'Software engineer across the Smart Boiler digital ecosystem. Built the cross-platform mobile client in Flutter (iOS/Android), responsive real-time web telemetry dashboard, and high-reliability mDNS & REST networking layer communicating directly with the ESP32.',
+          skills: ['Flutter / Dart', 'Mobile Apps', 'Web Dashboard', 'REST API & WebSocket', 'UI Engineering'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         },
         {
-          name: 'Thermal Systems & Field Testing',
-          role: 'Thermal Systems & Field HVAC Lead',
-          badge: 'Team Member',
-          focus: 'Boiler thermodynamics, gearboxes & field trials',
-          bio: 'Hands-on track record retrofitting solid-fuel boiler rooms from 20 kW to 500 kW. Deep expertise with worm gearboxes, auger flights, and fuel combustion calibration.',
-          skills: ['Hydraulics', 'Long-burning boilers', 'Gearboxes', 'Auger flights', '220V/380V Wiring'],
-          isPending: true,
-          pendingLabel: 'Profile updating',
+          name: 'Po\'latova Sevinchoy',
+          role: 'UI/UX Designer & Data Analyst (Product & QA)',
+          badge: 'UI/UX & QA Specialist',
+          focus: 'Interface design, 10-household telemetry data analysis & quality assurance',
+          bio: 'Spearheads UX ergonomics for smart heating control and fuel consumption visualization. Analyzes telemetry collected across the 10 pilot residential households in Urgench, conducts end-to-end QA validation, and prepares project documentation.',
+          skills: ['UI/UX Design', 'User Research', 'Data Analysis', 'QA Testing', 'Figma', 'Telemetry'],
           links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
         }
       ]
