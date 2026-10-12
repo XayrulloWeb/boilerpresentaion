@@ -58,10 +58,27 @@ export default function Footer() {
             <p className="text-slate-400 leading-normal">
               {t.footer.supportText}
             </p>
-            <div className="space-y-1 text-slate-200">
-              <div>{t.footer.techSupport} <span className="text-ember-400 font-bold">support@smartboiler.tech</span></div>
-              <div>{t.footer.phone} <span className="text-white font-bold">+7 (800) 555-32-18 / +998 (90) 000-00-00</span></div>
-              <div>{t.footer.network} <span className="text-plasma-400 font-bold">http://boiler.local</span></div>
+            <div className="space-y-1.5 text-slate-200">
+              <div className="flex items-start gap-1.5">
+                <span className="text-slate-400 shrink-0">{t.footer.location || 'Локация:'}</span>
+                <span className="text-white font-bold">{t.footer.locationVal || 'г. Ургенч, Хорезмская область, Узбекистан'}</span>
+              </div>
+              <div>
+                <span className="text-slate-400">{t.footer.techSupport} </span>
+                <a href={`mailto:${t.footer.emailVal || 'xayrulloweb@gmail.com'}`} className="text-ember-400 font-bold hover:underline transition-colors">
+                  {t.footer.emailVal || 'xayrulloweb@gmail.com'}
+                </a>
+              </div>
+              <div>
+                <span className="text-slate-400">{t.footer.phone} </span>
+                <a href="tel:+998943198108" className="text-white font-bold hover:text-ember-400 transition-colors">
+                  {t.footer.phoneVal || '+998 94 319 81 08'}
+                </a>
+              </div>
+              <div>
+                <span className="text-slate-400">{t.footer.network} </span>
+                <span className="text-plasma-400 font-bold">{t.footer.networkVal || 'http://boiler.local'}</span>
+              </div>
             </div>
           </div>
 

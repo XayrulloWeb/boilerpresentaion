@@ -224,7 +224,7 @@ export default function OrderConfigurator({ initialData = null }) {
                       <input
                         type="tel"
                         required
-                        placeholder="+998 90 000 00 00 / +7 999 000 00 00"
+                        placeholder="+998 94 319 81 08"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-ember-500 text-sm"
@@ -240,7 +240,7 @@ export default function OrderConfigurator({ initialData = null }) {
                       <input
                         type="text"
                         required
-                        placeholder="Tashkent / Moscow / Almaty"
+                        placeholder="Urganch / Toshkent"
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-obsidian-950 border border-white/10 text-white placeholder-slate-600 focus:outline-none focus:border-ember-500 text-sm"

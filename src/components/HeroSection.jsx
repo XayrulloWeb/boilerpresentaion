@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Flame, Zap, Shield, Wifi, Activity, ArrowDown, Play, Sparkles, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { sound } from '../utils/audio';
@@ -118,20 +119,33 @@ export default function HeroSection({ onOpenOrder }) {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
               <a
                 href="#antijam-lab"
                 onClick={() => sound.playButtonClick()}
-                className="group px-7 py-4 rounded-xl font-display font-semibold text-white bg-gradient-to-r from-ember-500 via-orange-500 to-amber-500 shadow-xl shadow-ember-500/25 hover:shadow-ember-500/40 hover:scale-[1.02] transition-all flex items-center gap-2"
+                className="group px-6 py-3.5 rounded-xl font-display font-semibold text-white bg-gradient-to-r from-ember-500 via-orange-500 to-amber-500 shadow-xl shadow-ember-500/25 hover:shadow-ember-500/40 hover:scale-[1.02] transition-all flex items-center gap-2 text-sm"
               >
-                <Zap className="w-5 h-5 text-amber-100 group-hover:rotate-12 transition-transform" />
+                <Zap className="w-4 h-4 text-amber-100 group-hover:rotate-12 transition-transform" />
                 <span>{t.hero.ctaExplore}</span>
               </a>
+
+              <Link
+                to="/demo"
+                onClick={() => sound.playButtonClick()}
+                className="group px-6 py-3.5 rounded-xl font-display font-semibold text-white bg-red-600/20 hover:bg-red-600/30 border border-red-500/40 hover:border-red-500 transition-all flex items-center gap-2 text-sm shadow-lg shadow-red-600/15 active:scale-95"
+              >
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                <Play className="w-4 h-4 text-red-400 fill-red-400 group-hover:scale-110 transition-transform" />
+                <span>{t.hero.demoVideo || 'Видео-Демо (/demo)'}</span>
+              </Link>
 
               <a
                 href="#calculator"
                 onClick={() => sound.playButtonClick()}
-                className="px-6 py-4 rounded-xl font-display font-medium text-slate-200 glass-panel glass-panel-hover flex items-center gap-2 text-sm"
+                className="px-6 py-3.5 rounded-xl font-display font-medium text-slate-200 glass-panel glass-panel-hover flex items-center gap-2 text-sm"
               >
                 <span>{t.hero.ctaRoi}</span>
               </a>

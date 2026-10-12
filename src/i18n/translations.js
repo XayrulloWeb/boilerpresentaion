@@ -16,6 +16,7 @@ export const translations = {
       title2: ' и защита от клина',
       subtitle: 'Первый микропроцессорный контроллер на ESP32 Dual-Core с токовой защитой от заклинивания шнека, автоматическим гистерезисным наддувом и мобильным приложением под ключ.',
       ctaExplore: 'Исследовать технологию',
+      demoVideo: 'Видео-Демо (/demo)',
       ctaRoi: 'Рассчитать окупаемость',
       metric1Val: 'до 40%',
       metric1Label: 'Экономия угля и пеллет',
@@ -112,7 +113,7 @@ export const translations = {
           bio: 'Сооснователь проекта. Работал в университете инженером 1-й категории (1-toifali muhandis). Богатый практический опыт реализации прикладных научно-технических и инженерных проектов, проектирования встраиваемых микропроцессорных систем и промышленной автоматики.',
           skills: ['1-toifali muhandis', 'ESP32 / C++', 'Схемотехника', 'Токовая защита ACS712', 'Промышленная автоматика', 'FreeRTOS'],
           isLead: true,
-          links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
+          links: { code: 'https://github.com/XayrulloWeb', telegram: 'https://t.me/xayrulloweb', web: 'mailto:xayrulloweb@gmail.com' }
         },
         {
           name: 'Отажанов Асадбек (Otajanov Asadbek)',
@@ -223,13 +224,18 @@ export const translations = {
     },
     footer: {
       slogan: 'Интеллектуальная микропроцессорная система автоматизации твердотопливных котлов. Защита электродвигателя шнека по току ACS712, прецизионный наддув и мобильное приложение без облачных подписок.',
-      madeBy: 'Сделано инженерами для суровых зим',
+      madeBy: 'Сделано инженерами для суровых зим • г. Ургенч',
       sectionsTitle: 'РАЗДЕЛЫ СИСТЕМЫ',
       engTitle: 'ИНЖЕНЕРНЫЙ ОТДЕЛ',
       supportText: 'Консультации по совместимости с редукторами, шнеками и горелками любого диаметра:',
+      location: 'Базирование / Адрес:',
+      locationVal: 'г. Ургенч, Хорезмская область, Узбекистан',
       techSupport: 'Техническая поддержка:',
+      emailVal: 'xayrulloweb@gmail.com',
       phone: 'Телефон инженера:',
+      phoneVal: '+998 94 319 81 08',
       network: 'Сетевой адрес в LAN:',
+      networkVal: 'http://boiler.local',
       rights: '© 2026 Smart Boiler Automation Systems. Все права защищены.',
       toTop: 'Наверх',
     }
@@ -252,6 +258,7 @@ export const translations = {
       title2: ' va shnek tiqilishidan himoya',
       subtitle: 'ESP32 Dual-Core asosidagi birinchi mikroprotsessorli boshqaruvchi. Shnek tiqilishidan tok orqali himoyalanish, avtomatik gisterezisli dam berish va tayyor Flutter mobil ilovasi.',
       ctaExplore: 'Texnologiyani o\'rganish',
+      demoVideo: 'Video-Demo (/demo)',
       ctaRoi: 'Tejamkorlikni hisoblash',
       metric1Val: '40% gacha',
       metric1Label: 'Ko\'mir va pellet iqtisodi',
@@ -348,7 +355,7 @@ export const translations = {
           bio: 'Loyiha hammuassisi. Universitetda 1-toifali muhandis lavozimida faoliyat yuritgan. Ilmiy-amaliy va turli murakkablikdagi muhandislik loyihalarini, ishonchli o\'rnatilgan mikrokontroller tizimlari hamda sanoat avtomatizatsiyasi yechimlarini muvaffaqiyatli amalga oshirgan.',
           skills: ['1-toifali muhandis', 'ESP32 / C++', 'Sxematexnika', 'ACS712 Tok himoyasi', 'Sanoat avtomatizatsiyasi', 'FreeRTOS'],
           isLead: true,
-          links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
+          links: { code: 'https://github.com/XayrulloWeb', telegram: 'https://t.me/xayrulloweb', web: 'mailto:xayrulloweb@gmail.com' }
         },
         {
           name: 'Otajanov Asadbek',
@@ -459,13 +466,18 @@ export const translations = {
     },
     footer: {
       slogan: 'Qattiq yoqilg\'i qozonlarini intellektual mikroprotsessorli avtomatlashtirish tizimi. ACS712 tok datchigi, aniq dam berish va bulutsiz mobil ilova.',
-      madeBy: 'Muhandislar tomonidan qahraton qishlar uchun yaratilgan',
+      madeBy: 'Muhandislar tomonidan qahraton qishlar uchun yaratilgan • Urganch shahri',
       sectionsTitle: 'TIZIM BO\'LIMLARI',
       engTitle: 'MUHANDISLIK BO\'LIMI',
       supportText: 'Har qanday diametrdagi reduktor, shnek va o\'choqlarga moslik bo\'yicha maslahat:',
+      location: 'Manzil / Joylashuv:',
+      locationVal: 'Urganch shahri, Xorazm viloyati, O\'zbekiston',
       techSupport: 'Texnik yordam:',
+      emailVal: 'xayrulloweb@gmail.com',
       phone: 'Muhandis telefoni:',
+      phoneVal: '+998 94 319 81 08',
       network: 'LAN tarmog\'idagi manzil:',
+      networkVal: 'http://boiler.local',
       rights: '© 2026 Smart Boiler Automation Systems. Barcha huquqlar himoyalangan.',
       toTop: 'Yuqoriga',
     }
@@ -488,6 +500,7 @@ export const translations = {
       title2: ' & Anti-Jam Protection',
       subtitle: 'The first microprocessor solid fuel controller powered by dual-core ESP32 with Hall-effect current anti-jam reverse, precise airflow, and a turnkey Flutter mobile app.',
       ctaExplore: 'Explore Technology',
+      demoVideo: 'Watch Demo (/demo)',
       ctaRoi: 'Calculate ROI',
       metric1Val: 'up to 40%',
       metric1Label: 'Coal & Pellet Savings',
@@ -584,7 +597,7 @@ export const translations = {
           bio: 'Co-Founder of Smart Boiler. Served as 1st Category Engineer (1-toifali muhandis) at the university. Extensive hands-on experience executing applied scientific and engineering initiatives, architecting robust embedded microprocessor systems, and industrial automation.',
           skills: ['1-toifali muhandis', 'ESP32 / C++', 'Schematic Design', 'ACS712 Current Sensing', 'Industrial Automation', 'FreeRTOS'],
           isLead: true,
-          links: { code: 'https://github.com', telegram: 'https://t.me', web: 'https://linkedin.com' }
+          links: { code: 'https://github.com/XayrulloWeb', telegram: 'https://t.me/xayrulloweb', web: 'mailto:xayrulloweb@gmail.com' }
         },
         {
           name: 'Otajanov Asadbek',
@@ -695,13 +708,18 @@ export const translations = {
     },
     footer: {
       slogan: 'Intelligent microprocessor automation for solid-fuel heating boilers. Hall-effect current protection, precision draft, and cloudless mobile control.',
-      madeBy: 'Engineered for sub-zero continental winters',
+      madeBy: 'Engineered for sub-zero continental winters • Urgench, Uzbekistan',
       sectionsTitle: 'SYSTEM DIRECTORY',
       engTitle: 'ENGINEERING DEPARTMENT',
       supportText: 'Consultations on gearmotors, auger flights, and burner compatibility of any diameter:',
+      location: 'HQ & Engineering Hub:',
+      locationVal: 'Urgench, Khorezm Region, Uzbekistan',
       techSupport: 'Technical Support:',
+      emailVal: 'xayrulloweb@gmail.com',
       phone: 'Engineer Hotline:',
+      phoneVal: '+998 94 319 81 08',
       network: 'Local LAN Address:',
+      networkVal: 'http://boiler.local',
       rights: '© 2026 Smart Boiler Automation Systems. All rights reserved.',
       toTop: 'To Top',
     }

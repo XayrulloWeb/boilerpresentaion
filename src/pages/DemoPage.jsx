@@ -4,36 +4,20 @@ import { Play, Film, ExternalLink, ArrowLeft, CheckCircle2, Zap, Shield, Flame, 
 import { sound } from '../utils/audio';
 
 export default function DemoPage() {
-  const [activeVideo, setActiveVideo] = useState('boiler'); // 'boiler' or 'auger'
+  const [aspectMode, setAspectMode] = useState('shorts'); // 'shorts' (9:16) or 'wide' (16:9)
 
-  const videos = {
-    boiler: {
-      title: '3D Взрыв-схема и аппаратная архитектура Smart Boiler',
-      src: '/videos/boiler_presentation.mp4',
-      duration: '3:45 мин',
-      desc: 'Полная кинематографическая разборка котла на компоненты: снятие внешней брони, раскрытие водяной рубашки, цифровой термозонд DS18B20, плата контроллера ESP32 и турбина наддува.',
-      timeline: [
-        { time: '00:00 – 00:45', title: 'Монолитный теплоизолированный корпус', detail: 'Жаропрочная котловая сталь 6 мм, гашение теплопотерь.' },
-        { time: '00:45 – 01:30', title: 'Водяная рубашка и датчик DS18B20', detail: 'Цифровой 1-Wire замер без аналоговых помех с точностью 0.1°C.' },
-        { time: '01:30 – 02:40', title: 'Двухъядерный вычислительный центр ESP32', detail: 'Аппаратная развязка реле, датчик Холла ACS712, память NVS.' },
-        { time: '02:40 – 03:45', title: 'Турбина наддува и максимальный КПД', detail: 'Плавная регулировка подачи кислорода, сжигание угля без шлака.' }
-      ]
-    },
-    auger: {
-      title: 'Стендовые испытания: Заклинивание шнека и авто-реверс',
-      src: '/videos/auger_reverse.mp4',
-      duration: '2:15 мин',
-      desc: 'Реальная физика заклинивания шнека камнем антрацита. Детекция броска тока датчиком ACS712, защитная пауза 300 мс и автоматический 3-секундный реверс шнека.',
-      timeline: [
-        { time: '00:00 – 00:30', title: 'Штатная подача топлива', detail: 'Шнек подает уголь вперед с номинальным током 0.85А.' },
-        { time: '00:30 – 00:55', title: 'Попадание твердой породы в виток', detail: 'Резкая блокировка ротора, подскакивание тока до 4.35А.' },
-        { time: '00:55 – 01:35', title: 'Срабатывание защиты и реверс 3 сек', detail: 'Реле PIN 18 размыкается, включается реверс PIN 19 на 3000 мс.' },
-        { time: '01:35 – 02:15', title: 'Сброс камня и продолжение работы', detail: 'Порода падает в зольник, штатный цикл подачи возобновлен.' }
-      ]
-    }
+  const video = {
+    title: 'Smart Boiler qurilmasi haqida — Реальная демонстрация устройства',
+    embedUrl: 'https://www.youtube.com/embed/heTbtOToZdE',
+    directUrl: 'https://youtube.com/shorts/heTbtOToZdE?si=7yUYinkr_JxNKDPA',
+    duration: '0:59 мин',
+    desc: 'Практическая видеодемонстрация готового устройства Smart Boiler: обзор изготовленного корпуса, электронного блока управления, подключения датчиков к котлу и работы силовой автоматики.',
+    timeline: [
+      { time: '00:00 – 00:15', title: 'Обзор корпуса и компоновки блока', detail: 'Внешний вид контроллера Smart Boiler, органы управления и эргономика.' },
+      { time: '00:15 – 00:35', title: 'Подключение датчиков и силовой части', detail: 'Интеграция цифрового датчика DS18B20, сенсора ACS712 и реле шнека/турбины.' },
+      { time: '00:35 – 00:59', title: 'Проверка рабочих режимов автоматики', detail: 'Подача топлива, управление наддувом и защита от аварийных ситуаций.' }
+    ]
   };
-
-  const current = videos[activeVideo];
 
   return (
     <div className="min-h-screen bg-obsidian-950 text-slate-100 pt-24 pb-20 selection:bg-ember-500 selection:text-white">
@@ -69,55 +53,91 @@ export default function DemoPage() {
             </span>
           </h1>
           <p className="text-slate-400 text-base max-w-3xl leading-relaxed">
-            Раздел подготовлен в соответствии с требованиями регламента Pitch Day 3.0. Ниже представлены видеозаписи испытаний системы, хронометраж инженерных процессов и доступ к работающему прототипу.
+            Раздел подготовлен в соответствии с требованиями регламента Pitch Day 3.0. Ниже представлена видеозапись испытаний системы, хронометраж инженерных процессов и доступ к работающему прототипу.
           </p>
         </div>
 
-        {/* Video Switcher Tabs */}
-        <div className="flex flex-wrap gap-3">
-          <button
-            onClick={() => {
-              sound.playButtonClick();
-              setActiveVideo('boiler');
-            }}
-            className={`px-5 py-3 rounded-2xl border font-display text-sm font-semibold transition-all flex items-center gap-2.5 ${
-              activeVideo === 'boiler'
-                ? 'border-ember-500 bg-ember-500/20 text-white shadow-xl shadow-ember-500/20'
-                : 'border-white/10 bg-obsidian-900 text-slate-400 hover:text-white'
-            }`}
-          >
-            <Film className="w-4 h-4 text-ember-400" />
-            <span>Видео 1: 3D Разбор и архитектура (3:45)</span>
-          </button>
-
-          <button
-            onClick={() => {
-              sound.playButtonClick();
-              setActiveVideo('auger');
-            }}
-            className={`px-5 py-3 rounded-2xl border font-display text-sm font-semibold transition-all flex items-center gap-2.5 ${
-              activeVideo === 'auger'
-                ? 'border-ember-500 bg-ember-500/20 text-white shadow-xl shadow-ember-500/20'
-                : 'border-white/10 bg-obsidian-900 text-slate-400 hover:text-white'
-            }`}
-          >
-            <Zap className="w-4 h-4 text-amber-400" />
-            <span>Видео 2: Тест заклинивания и реверса (2:15)</span>
-          </button>
+        {/* Active Demo Video Badge */}
+        <div className="flex items-center gap-3">
+          <div className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl border border-red-500/40 bg-red-500/15 text-white font-display text-sm font-semibold shadow-xl shadow-red-500/20">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
+            </span>
+            <Play className="w-4 h-4 text-red-400 fill-red-400" />
+            <span>Smart Boiler qurilmasi haqida (YouTube Shorts)</span>
+          </div>
         </div>
 
         {/* Video Player Card */}
-        <div className="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl p-3 sm:p-4 bg-obsidian-900/90">
-          <div className="relative rounded-2xl overflow-hidden aspect-video bg-black shadow-inner">
-            <video
-              key={current.src}
-              src={current.src}
-              controls
-              autoPlay
-              muted
-              playsInline
-              className="w-full h-full object-contain"
-            />
+        <div className="glass-panel rounded-3xl overflow-hidden border border-white/10 shadow-2xl p-3 sm:p-5 bg-obsidian-900/90 space-y-4">
+          
+          {/* Controls toolbar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 px-2 pt-1 pb-2 border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono text-slate-400">Формат отображения:</span>
+              <div className="inline-flex rounded-xl bg-obsidian-950 p-1 border border-white/10 text-xs font-mono">
+                <button
+                  onClick={() => {
+                    sound.playButtonClick();
+                    setAspectMode('shorts');
+                  }}
+                  className={`px-3 py-1 rounded-lg transition-all ${
+                    aspectMode === 'shorts'
+                      ? 'bg-red-500/30 text-white font-bold border border-red-500/40'
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Shorts (9:16)
+                </button>
+                <button
+                  onClick={() => {
+                    sound.playButtonClick();
+                    setAspectMode('wide');
+                  }}
+                  className={`px-3 py-1 rounded-lg transition-all ${
+                    aspectMode === 'wide'
+                      ? 'bg-red-500/30 text-white font-bold border border-red-500/40'
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  Широкий (16:9)
+                </button>
+              </div>
+            </div>
+
+            {video.directUrl && (
+              <a
+                href={video.directUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => sound.playButtonClick()}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-red-600/20 hover:bg-red-600/30 border border-red-500/40 text-red-300 text-xs font-mono transition-all hover:scale-[1.02] active:scale-95"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Смотреть в YouTube Shorts</span>
+              </a>
+            )}
+          </div>
+
+          {/* Player viewport */}
+          <div className="flex justify-center bg-black/80 rounded-2xl p-2 sm:p-4">
+            <div
+              className={`w-full overflow-hidden rounded-2xl bg-black shadow-2xl border border-white/10 transition-all duration-300 ${
+                aspectMode === 'shorts'
+                  ? 'max-w-[420px] aspect-[9/16]'
+                  : 'max-w-5xl aspect-video'
+              }`}
+            >
+              <iframe
+                key={`youtube-${aspectMode}`}
+                src={`${video.embedUrl}?autoplay=1&rel=0&modestbranding=1`}
+                title={video.title}
+                className="w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
 
@@ -130,13 +150,24 @@ export default function DemoPage() {
               6.2. ОПИСАНИЕ ДЕМОНСТРАЦИОННОГО ВИДЕО
             </div>
             <h3 className="font-display font-bold text-2xl text-white">
-              {current.title}
+              {video.title}
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed">
-              {current.desc}
+              {video.desc}
             </p>
-            <div className="pt-2 text-xs font-mono text-slate-400">
-              Длительность ролика: <span className="text-white font-bold">{current.duration}</span>
+            <div className="pt-2 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-slate-400 border-t border-white/10 pt-4">
+              <div>Длительность: <span className="text-white font-bold">{video.duration}</span></div>
+              {video.directUrl && (
+                <a
+                  href={video.directUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-400 hover:text-red-300 underline inline-flex items-center gap-1"
+                >
+                  <span>Ссылка на ролик</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -146,7 +177,7 @@ export default function DemoPage() {
               ПОКАДРОВЫЙ ХРОНОМЕТРАЖ И ТАЙМКОДЫ
             </div>
             <div className="space-y-3 font-mono text-xs">
-              {current.timeline.map((item, idx) => (
+              {video.timeline.map((item, idx) => (
                 <div key={idx} className="p-3.5 rounded-xl bg-obsidian-850/80 border border-white/5 space-y-1">
                   <div className="flex items-center justify-between text-ember-300 font-bold">
                     <span>{item.time}</span>
